@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="uk" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${contact.getName()}"></title>
+</head>
+<body>
+<p th:text="${contact.getId()+' '+contact.getName()+' '+contact.getSurname()+' '+contact.getTel()}"></p>
+
+<form th:action="@{'/updatecontact'}" method="post">
+    <input type="text" name="name" th:value="${contact.getName()}">
+    <input type="text" name="surname" th:value="${contact.getSurname()}">
+    <input type="text" name="tel" th:value="${contact.getTel()}">
+    <input type="submit">
+
+</form>
+</body>
+</html>

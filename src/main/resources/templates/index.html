@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="uk" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Generall</title>
+</head>
+<body>
+<h1>[[${msg}]] !</h1>
+<form action="/save" method="POST"  enctype="multipart/form-data">
+    <input type="text" name="name" placeholder="name">
+    <input type="text" name="surname" placeholder="surname">
+    <input type="text" name="tel" placeholder="tel">
+    <input type="file" name="avatar" placeholder="avatar">
+
+    <input type="submit" value="Send"></form>
+<a href="/allcontacts"><button>All contacts</button></a>
+</body>
+</html>

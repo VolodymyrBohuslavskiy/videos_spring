@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="uk" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>contactList</title>
+</head>
+<body>
+<br>
+<ul>
+<li th:each="contact : ${list}">
+    [[${contact.name}]]
+    <a th:href="@{'contactdetail/'+${contact.getId()}}"><button type="button">Details</button></a>
+</li>
+</ul>
+</body>
+</html>
